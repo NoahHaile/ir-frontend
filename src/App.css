@@ -1,38 +1,97 @@
-.App {
+/* General Container */
+.search-container {
   text-align: center;
+  margin-top: 100px;
+  padding: 0 20px;
+  font-family: 'Arial', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Search Input */
+.search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 14px 20px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-input:focus {
+  border-color: #4285f4;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+  outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Search Button */
+.search-button {
+  padding: 14px 24px;
+  font-size: 18px;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.search-button:hover {
+  background-color: #357ae8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-button:active {
+  transform: scale(0.98);
+}
+
+/* Results Container */
+.results {
+  margin-top: 40px;
+  text-align: left;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Result Item */
+.result-item {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+.result-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Result Title */
+.result-item h3 {
+  font-size: 22px;
+  color: #1a0dab;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.result-item h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.result-item h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Result Description */
+.result-item p {
+  color: #333;
+  font-size: 16px;
+  margin: 10px 0 0;
+}
+
+/* Loading State */
+.loading {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #666;
 }
