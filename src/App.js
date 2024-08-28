@@ -19,7 +19,7 @@ const Search = () => {
 
     try {
       // Fetch search results from the backend
-      const response = await axios.post('http://localhost:8081/query', { query });
+      const response = await axios.post('http://94.130.58.212:8081/query', { query });
       const fetchedResults = response.data;
 
       if (fetchedResults.length > 0) {
@@ -54,7 +54,7 @@ const Search = () => {
   const parsePageContent = async (url) => {
     try {
       // Make a POST request to the backend endpoint with the URL in the body
-      const response = await axios.post('http://localhost:8081/scrape_link', { query: url });
+      const response = await axios.post('http://94.130.58.212:8081/scrape_link', { query: url });
 
       // Get the response from the backend
       const scrapedContent = response.data;
